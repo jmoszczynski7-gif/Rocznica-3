@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1 Rocznica ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      max-width: 800px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: 400;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .heart {
+      font-size: 4rem;
+      animation: pulse 1.5s infinite;
+      margin: 20px 0;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  .slider {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.slider img {
+  display: none;
+  width: auto;          /* oryginalna szerokość */
+  height: auto;         /* oryginalna wysokość */
+  max-width: none;      /* NIE skaluje w górę */
+}
+
+.slider img.active {
+  display: block;
+}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Nasza 1 Rocznica</h1>
+    <h2>365 dni razem 💕</h2>
+
+    <div class="heart">❤️</div>
+
+    <!-- SLIDER ZE ZDJĘCIAMI -->
+    <div class="slider">
+      <img src="1.jpg" alt="Zdjęcie 1" class="active">
+      <img src="2.jpg" alt="Zdjęcie 2">
+      <img src="3.jpg" alt="Zdjęcie 3">
+      <img src="4.jpg" alt="Zdjęcie 4">
+      <img src="5.jpg" alt="Zdjęcie 5">
+      <img src="6.jpg" alt="Zdjęcie 6">
+      <img src="7.jpg" alt="Zdjęcie 7">
+      <img src="8.jpg" alt="Zdjęcie 8">
+      <img src="9.jpg" alt="Zdjęcie 9">
+      <img src="10.jpg" alt="Zdjęcie 10">
+      <img src="11.jpg" alt="Zdjęcie 11">
+      <img src="12.jpg" alt="Zdjęcie 12">
+      <img src="13.jpg" alt="Zdjęcie 13">
+      <img src="14.jpg" alt="Zdjęcie 14">
+      <img src="15.jpg" alt="Zdjęcie 15">
+      <img src="16.jpg" alt="Zdjęcie 16">
+      <img src="17.jpg" alt="Zdjęcie 17">
+      <img src="18.jpg" alt="Zdjęcie 18">
+      <img src="19.jpg" alt="Zdjęcie 19">
+      <img src="20.jpg" alt="Zdjęcie 20">
+    </div>
+
+    <p>
+      Dokładnie rok temu zaczęła się nasza wspólna historia. 
+      Był to czas pełen uśmiechów, rozmów do późna, wspólnych marzeń 
+      i chwil, które na zawsze zostaną w moim sercu.Przepraszam za te okropne kwiaty😔.
+    </p>
+
+    <p>
+      Dziękuję Ci za każdy dzień, za wsparcie, cierpliwość i miłość. 
+      To dopiero początek – nie mogę się doczekać kolejnych wspólnych lat❤️.
+    </p>
+
+    <footer>
+      <p>❤️ Kocham cie dziubus!❤️</p>
+    </footer>
+  </div>
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    let current = 0;
+
+    slides[current].classList.add('active');
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
